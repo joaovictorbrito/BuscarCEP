@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar CEP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <html>    
+        <body>
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <a class="navbar-brand text-white" href="#">Buscar CEP</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>             
+                
+                </div>
+            </nav>
+        <!-- Inicio do formulario -->
+            <div class="containerRow">
+                <section id="left">
+                    <h3>Buscar CEP</h3>
+                    <form method="get" action=".">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Cep:
+                                <input name="cep" style="width: 250px;" class="form-control"  placeholder="Cep" type="text" id="cep" value="" size="10" maxlength="9"
+                                    onblur="pesquisacep(this.value);" /></label><br />
+                                <label>Rua:
+                                <input name="rua"style="width: 250px;" class="form-control" placeholder="Rua" type="text" id="rua" size="60" /></label><br />
+                                <label>Bairro:
+                                <input name="bairro"style="width: 250px;" class="form-control" placeholder="Bairro" type="text" id="bairro" size="40" /></label><br />
+                                <label>Cidade:
+                                <input name="cidade"style="width: 250px;" class="form-control" placeholder="Cidade"type="text" id="cidade" size="40" /></label><br />
+                                <label>Estado:
+                                <input name="uf"style="width: 250px;" class="form-control" placeholder="Estado" type="text" id="uf" size="2" /></label><br/>
+                                <label>IBGE:
+                                <input name="ibge"style="width: 250px;" class="form-control" placeholder="IBGE" type="text" id="ibge" size="8" /></label><br/>                                                
+                        </div>
+                    </form>    
+                    <button class="btn btn-primary" onclick="meu_callback() ">Buscar</button>
+                    <button class="btn btn-danger" onclick="limpa_formulário_cep()">Limpar Formulario</button>
+                </section>
+                <aside id="right">
+                    <img src="image/bairro.jpg" alt="bairro">
+                </aside>
+            </div>
+            <script src="script/script.js"></script>
+        </body>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
+        
